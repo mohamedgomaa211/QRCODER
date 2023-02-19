@@ -1,3 +1,5 @@
+using QRCode.Helper.QRCodeGenerator;
+
 namespace QRCODE
 {
     public class Program
@@ -8,6 +10,7 @@ namespace QRCODE
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<IQRCodeGeneratorHelper, QRCodeGeneratoreHelper>();
 
             var app = builder.Build();
 
